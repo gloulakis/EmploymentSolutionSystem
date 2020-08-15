@@ -40,7 +40,12 @@ namespace EmploymentSolutionSystem.Controllers
             return View();
         }
 
-      
+        [HttpGet]
+        public IActionResult ClientView()
+        {
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {
