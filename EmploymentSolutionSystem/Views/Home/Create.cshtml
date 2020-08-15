@@ -1,4 +1,5 @@
-﻿@{
+﻿@model JobList
+@{
     ViewData["Title"] = "Create";
 }
 
@@ -11,5 +12,37 @@
                   <a asp-action="Advertisement" class="btn btn-info">Back</a>
               </div>
           </div>
+            <br />
 
+          <form asp-controller="Home" asp-action="Create" method="post">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Title</span>
+                  </div>
+                  <input type="text" class="form-control" asp-for="JobTitle" aria-label="Job Title" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Position</span>
+                  </div>
+                  <input type="text" class="form-control" asp-for="JobPosition" aria-label="Job Position" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Description</span>
+                  </div>
+                  <input type="text" class="form-control" asp-for="JobDescription" aria-label="Job Description" aria-describedby="basic-addon1">
+              </div>
+             
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Salary</span>
+                  </div>
+                  <input type="text" class="form-control" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
+              </div>
+              
+
+              <input class="btn btn-info" type="submit" value="Add" />
+          </form>
 

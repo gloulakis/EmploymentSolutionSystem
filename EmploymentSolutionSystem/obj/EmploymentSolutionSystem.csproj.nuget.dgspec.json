@@ -38,6 +38,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.12, )"
+            },
+            "Microsoft.AspNet.Razor.es": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.7, )"

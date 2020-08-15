@@ -1,49 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using EmploymentSolutionSystem.Models;
-using Microsoft.AspNetCore.Routing;
-using EmploymentSolutionSystem.Data;
+using EmploymentSolutionSystem.Services;
 using EmploymentSolutionSystem.Domain.Models;
-using Microsoft.EntityFrameworkCore;
-using EmploymentSolutionSystem.Domain.Services;
 
 namespace EmploymentSolutionSystem.Controllers
 {
+
     public class HomeController : Controller
     {
-        private readonly IJobListServices joblist;
+        private readonly IJobListService jobListServices;
 
-        public HomeController(IJobListServices joblist)
+
+        public HomeController(IJobListService jobListServices)
         {
-            this.joblist = joblist;
+            this.jobListServices = jobListServices;
         }
+
 
         public IActionResult Index()
         {
             return View();
         }
+
        
-        [HttpGet]
-        public IActionResult Advertisement()
+        public IActionResult ClientView()
         {
-            return View();
+            var model = jobListServices.GetAll();
+            return View(model);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
+            
             return View();
         }
 
-        [HttpGet]
-        public IActionResult ClientView()
+        [HttpPost]
+        public IActionResult Create(JobList jobList)
         {
-            return View();
+            jobListServices.Add(jobList);
+            return RedirectToAction("Advertisement");
+        }
+
+        [HttpGet]
+        public IActionResult Advertisement()
+        {
+            var model = jobListServices.GetAll();
+            return View(model);
         }
 
 

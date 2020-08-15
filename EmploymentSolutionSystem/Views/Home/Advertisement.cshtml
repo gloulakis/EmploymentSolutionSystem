@@ -1,9 +1,7 @@
-﻿@model EmploymentSolutionSystem.Domain.Models.JobList
+﻿@model List<JobList>
 @{
-    ViewData["Title"] = "Advertisement";
+    ViewData["Title"] = "Job Advertisements";
 }
-
-<br/><br />
 
 <div class="border border-white">
 
@@ -15,8 +13,43 @@
             <a asp-action="Create" class="btn btn-info">Create</a>
         </div>
     </div>
+    <br />
     <div>
-     
-       
+        @if (Model == null)
+        {
+            <p>No Job exists. Please Create a new Job Advertisement!</p>
+        }
+        else
+        {
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Salary</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                @foreach (var job in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <th scope="row">@job.Id</th>
+                            <td>@Html.DisplayFor(m => job.JobTitle)</td>
+                            <td>@Html.DisplayFor(m => job.JobPosition)</td>
+                            <td>@Html.DisplayFor(m => job.JobDescription)</td>
+                            <td>@Html.DisplayFor(m => job.JobSalary)</td>
+                            <th scope="col"><a asp-action="/" class="btn btn-outline-warning"><i class="far fa-edit"></i></a></th>
+                            <th scope="col"><a asp-action="/" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></a></th>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+        }
+
     </div>
-</div>
+
+
