@@ -24,10 +24,8 @@
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Position</th>
-                        <th scope="col">Description</th>
                         <th scope="col">Salary</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
@@ -37,13 +35,12 @@
                 {
                     <tbody>
                         <tr>
-                            <th scope="row">@job.Id</th>
+                            
                             <td>@Html.DisplayFor(m => job.JobTitle)</td>
                             <td>@Html.DisplayFor(m => job.JobPosition)</td>
-                            <td>@Html.DisplayFor(m => job.JobDescription)</td>
                             <td>@Html.DisplayFor(m => job.JobSalary)</td>
-                            <th scope="col"><a asp-action="/" class="btn btn-outline-warning"><i class="far fa-edit"></i></a></th>
-                            <th scope="col"><a asp-action="/" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></a></th>
+                            <th scope="col"><a onclick="edit('@job.Id')"  class="btn btn-outline-warning"><i class="far fa-edit"></i></a></th>
+                            <th scope="col"><a onclick="GetJobtodelete('@job.Id','@job.JobTitle')" data-toggle="modal" data-target="#exampleModal" asp-action="/" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></a></th>
                         </tr>
                     </tbody>
                 }
@@ -51,5 +48,48 @@
         }
 
     </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure - <span id="JobToDeleteTitle"></span><span hidden id="JobToDeleteID"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button onclick="DeleteJob()" type="button" class="btn btn-primary">Delete</button>
+                </div>
+        </div>
+    </div>
+        </div>
 
 
+
+<script>
+    function edit(id) {
+        window.location ="/Home/Edit/"+id
+    }
+
+    function GetJobtodelete(id, Title) {
+        var $Title = $("#JobToDeleteTitle");
+        var $id = $("#JobToDeleteID");
+
+        $Title.html(Title);
+        $id.html(id);
+    }
+
+    function DeleteJob() {
+        var $id = $("#JobToDeleteID").html();
+        window.location = "/Home/Delete/"+ $id;
+    }
+
+  
+
+</script>

@@ -22,9 +22,34 @@ namespace EmploymentSolutionSystem.Services
             db.SaveChanges();
         }
 
+        public void Delete(int id)
+        {
+            JobList job = this.GetById(id);
+            db.Joblist.Remove(job);
+            db.SaveChanges();
+        }
+
+        public void Edit(JobList jobList)
+        {
+            var JobEdit = db.Joblist.FirstOrDefault(J => J.Id == jobList.Id);
+            if(JobEdit != null)
+            {
+                JobEdit.JobTitle = jobList.JobTitle;
+                JobEdit.JobPosition = jobList.JobPosition;
+                JobEdit.JobDescription = jobList.JobDescription;
+                JobEdit.JobSalary = jobList.JobSalary;
+                db.SaveChanges();
+            }
+        }
+
         public IEnumerable<JobList> GetAll()
         {
             return db.Joblist.ToList();
+        }
+
+        public JobList GetById(int id)
+        {
+            return db.Joblist.FirstOrDefault(J => J.Id == id);
         }
     }
 }

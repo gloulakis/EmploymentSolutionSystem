@@ -1,0 +1,32 @@
+﻿@model JobList
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Home" asp-action="SaveEdit" method="post">
+    <div class="row align-bottom">
+        <div class="col-md-3">
+            <span>
+                <label asp-for="JobTitle"></label>
+                <input class="form-control" asp-for="JobTitle" />
+            </span>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="JobDescription"></label>
+            <input class="form-control" asp-for="JobDescription" />
+        </div>
+        <div class="col-md-3">
+            <label asp-for="JobPosition"></label>
+            <input class="form-control" asp-for="JobPosition" />
+        </div>
+        <div class="col-md-3">
+            <label asp-for="JobSalary"></label>
+            <input class="form-control" asp-for="JobSalary" />
+        </div>
+    </div>
+    <hr />
+    <input asp-for="Id" hidden />
+    <input class="btn btn-primary" type="submit" value="Save" />
+</form>

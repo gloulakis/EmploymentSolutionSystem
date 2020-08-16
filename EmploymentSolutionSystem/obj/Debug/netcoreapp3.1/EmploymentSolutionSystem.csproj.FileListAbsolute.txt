@@ -880,3 +880,4 @@ C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSys
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Debug\netcoreapp3.1\es\System.Web.Razor.resources.dll
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Advertisement.cshtml.g.cs
+C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs

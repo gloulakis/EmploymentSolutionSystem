@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using EmploymentSolutionSystem.Models;
 using EmploymentSolutionSystem.Services;
 using EmploymentSolutionSystem.Domain.Models;
+using System;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EmploymentSolutionSystem.Controllers
 {
@@ -17,6 +20,34 @@ namespace EmploymentSolutionSystem.Controllers
             this.jobListServices = jobListServices;
         }
 
+        
+        public IActionResult Delete( int id)
+        {
+            if (ModelState.IsValid)
+            {
+                jobListServices.Delete(id);
+
+            }
+            return RedirectToAction("Advertisement");
+        }
+
+        [HttpGet]
+        [Route("Home/Edit/{id}")]
+        public IActionResult Edit (int id)
+        {
+            var model = jobListServices.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult SaveEdit(JobList jobList)
+        {
+            if (ModelState.IsValid)
+            {
+                jobListServices.Edit(jobList);
+            }
+            return RedirectToAction("Advertisement");
+        }
 
         public IActionResult Index()
         {
@@ -45,6 +76,7 @@ namespace EmploymentSolutionSystem.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult Advertisement()
         {
             var model = jobListServices.GetAll();
