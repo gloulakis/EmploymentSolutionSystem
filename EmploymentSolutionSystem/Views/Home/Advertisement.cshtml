@@ -11,6 +11,7 @@
         </div>
         <div class="col-6 text-right">
             <a asp-action="Create" class="btn btn-info">Create</a>
+            <a asp-action="ClientView" class="btn btn-info">Client View</a>
         </div>
     </div>
     <br />
@@ -29,18 +30,22 @@
                         <th scope="col">Salary</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 @foreach (var job in Model)
                 {
                     <tbody>
                         <tr>
-                            
+
                             <td>@Html.DisplayFor(m => job.JobTitle)</td>
                             <td>@Html.DisplayFor(m => job.JobPosition)</td>
                             <td>@Html.DisplayFor(m => job.JobSalary)</td>
-                            <th scope="col"><a onclick="edit('@job.Id')"  class="btn btn-outline-warning"><i class="far fa-edit"></i></a></th>
-                            <th scope="col"><a onclick="GetJobtodelete('@job.Id','@job.JobTitle')" data-toggle="modal" data-target="#exampleModal" asp-action="/" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></a></th>
+                            
+                            <td scope="col"><a onclick="edit('@job.Id')" class="btn btn-outline-warning"><i class="far fa-edit"></i></a></td>
+                            <td scope="col"><a onclick="GetJobtodelete('@job.Id','@job.JobTitle')" data-toggle="modal" data-target="#exampleModal" asp-action="/" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></a></td>
+                            <td scope="col"><a onclick="hide('@job.Id')" class="btn btn-outline-info"><i class="far fa-eye-slash"></i></a></td>
+                         
                         </tr>
                     </tbody>
                 }
