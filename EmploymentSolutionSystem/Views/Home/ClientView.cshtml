@@ -23,7 +23,13 @@
     {
         foreach (var job in Model)
         {
-            <div class="card shadow" style="width: 18rem; height:20rem; overflow:hidden">
+            <div class="card shadow" style="       
+                    width: 18rem;
+                    height: 20rem;
+                    overflow: hidden;
+                    float: left;
+                    border: 2px solid;
+                    margin: 10px;">
                 <img src="https://assets.jobs.bg/assets/job_cover/2020-04-01/s_348d6ed795da73a6f839cab8a9046c87.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">@job.JobTitle</h5>
@@ -34,8 +40,7 @@
 
                 </div>
             </div>
-            
-            <br />
+           
 
             <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable" role="document">
