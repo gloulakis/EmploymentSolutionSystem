@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using EmploymentSolutionSystem.Services;
+using EmploymentSolutionSystem.Domain.Services;
 
 namespace EmploymentSolutionSystem
 {
@@ -30,7 +31,7 @@ namespace EmploymentSolutionSystem
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddTransient<IJobListService, JobListService>();
-           
+            services.AddTransient<ICompanyService, CompanyService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

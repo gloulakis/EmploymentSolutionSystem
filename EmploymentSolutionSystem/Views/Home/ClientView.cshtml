@@ -11,52 +11,73 @@
 </div>
 <br />
 
-
-
-
 @{
     if (Model == null)
     {
-        <p>Empty</p>
+        for (int i = 0; i < 10; i++)
+        {
+            <div class="card shadow" style="
+                    width: 18rem;
+                    height: 20rem;
+                    overflow: hidden;
+                    float: left;
+                    border: 2px solid;
+                    margin: 10px;">
+                <img src="/Images/Home/30.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Empty</h5>
+                    <h5 hidden class="card-title font-weight-bold">Empty</h5>
+                    <p class="card-text font-weight-bold">Position:Empty</p>
+                    <p>Salary:Empty</p>
+                    <a data-toggle="modal" data-target="#exampleModalScrollable" class="btn btn-outline-dark">More</a>
+                </div>
+            </div>
+        }
     }
     else
     {
         foreach (var job in Model)
         {
-            <div class="card shadow" style="width: 18rem; height:20rem; overflow:hidden">
+            <div class="card shadow" style="
+                    width: 18rem;
+                    height: 20rem;
+                    overflow: hidden;
+                    float: left;
+                    border: 2px solid;
+                    margin: 10px;">
                 <img src="https://assets.jobs.bg/assets/job_cover/2020-04-01/s_348d6ed795da73a6f839cab8a9046c87.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">@job.JobTitle</h5>
+                    <h5 hidden class="card-title font-weight-bold">@job.Id</h5>
                     <p class="card-text font-weight-bold">Position:@job.JobPosition</p>
                     <p>Salary:@job.JobSalary</p>
                     <a data-toggle="modal" data-target="#exampleModalScrollable" class="btn btn-outline-dark">More</a>
-
-
-                </div>
-            </div>
-            
-            <br />
-
-            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalScrollableTitle">@job.JobTitle</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            @job.JobDescription
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Apply</button>
-                            <br />
+                    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalScrollableTitle">@job.JobTitle</h5>
+                                    <h5 hidden class="modal-title" id="exampleModalScrollableTitle">@job.Id</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    @job.JobDescription
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Apply</button>
+                                    <br />
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+
+
         }
     }
 }

@@ -4,6 +4,7 @@ using EmploymentSolutionSystem.Models;
 using EmploymentSolutionSystem.Services;
 using EmploymentSolutionSystem.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
+using EmploymentSolutionSystem.Domain.Services;
 
 namespace EmploymentSolutionSystem.Controllers
 {
@@ -24,7 +25,6 @@ namespace EmploymentSolutionSystem.Controllers
             if (ModelState.IsValid)
             {
                 jobListServices.Delete(id);
-
             }
             return RedirectToAction("Advertisement");
         }
@@ -86,7 +86,7 @@ namespace EmploymentSolutionSystem.Controllers
             return View(model);
         }
 
-
+        [AllowAnonymous]
         public IActionResult Privacy()
         {
             return View();
