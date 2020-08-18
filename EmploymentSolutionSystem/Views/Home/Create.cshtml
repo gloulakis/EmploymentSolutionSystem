@@ -36,15 +36,16 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Description</span>
         </div>
-        <input type="text" class="form-control" asp-for="JobDescription" aria-label="Job Description" aria-describedby="basic-addon1">
-        <span asp-validation-for="JobDescription" class="text-danger"></span>   
+        <textarea class="form-control" asp-for="JobDescription"> Здравей Слив </textarea>
+        
+        <span asp-validation-for="JobDescription" class="text-danger"></span>
     </div>
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Salary</span>
             </div>
-            <input type="number" class="form-control" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
+            <input type="number" class="form-control" style="width:auto" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
             <span asp-validation-for="JobSalary" class="text-danger"></span>
         </div>
 
@@ -63,6 +64,8 @@
         <input class="btn btn-info" type="submit" value="Add" />
 </form>
 
+
+<br /><br />
 
 
 
