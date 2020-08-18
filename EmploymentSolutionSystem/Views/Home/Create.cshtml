@@ -3,46 +3,83 @@
     ViewData["Title"] = "Create";
 }
 
-    <br /><br />
-          <div class="form-row">
-              <div class="col-6">
-                  <h4 class="text-info">Create New Advertisement!</h4>
-              </div>
-              <div class="col-6 text-right">
-                  <a asp-action="Advertisement" class="btn btn-info">Back</a>
-              </div>
-          </div>
-            <br />
+<br />
+<br />
+<div class="form-row">
+    <div class="col-6">
+        <h4 class="text-info">Create New Advertisement!</h4>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-action="Advertisement" class="btn btn-info">Back</a>
+    </div>
+</div>
+<br />
 
-          <form asp-controller="Home" asp-action="Create" method="post">
-              <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">Title</span>
-                  </div>
-                  <input type="text" class="form-control" asp-for="JobTitle" aria-label="Job Title" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">Position</span>
-                  </div>
-                  <input type="text" class="form-control" asp-for="JobPosition" aria-label="Job Position" aria-describedby="basic-addon1">
-              </div>
+<form asp-controller="Home" asp-action="Create" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Title</span>
+        </div>
+        <input type="text" class="form-control" asp-for="JobTitle" aria-label="Job Title" aria-describedby="basic-addon1">
+        <span asp-validation-for="JobTitle" class="text-danger"></span>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Position</span>
+        </div>
+        <input type="text" class="form-control" asp-for="JobPosition" aria-label="Job Position" aria-describedby="basic-addon1">
+        <span asp-validation-for="JobPosition" class="text-danger"></span>
+    </div>
 
-              <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">Description</span>
-                  </div>
-                  <input type="text" class="form-control" asp-for="JobDescription" aria-label="Job Description" aria-describedby="basic-addon1">
-              </div>
-             
-              <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">Salary</span>
-                  </div>
-                  <input type="number" class="form-control" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
-              </div>
-              
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Description</span>
+        </div>
+        <input type="text" class="form-control" asp-for="JobDescription" aria-label="Job Description" aria-describedby="basic-addon1">
+        <span asp-validation-for="JobDescription" class="text-danger"></span>   
+    </div>
 
-              <input class="btn btn-info" type="submit" value="Add" />
-          </form>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Salary</span>
+            </div>
+            <input type="number" class="form-control" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
+            <span asp-validation-for="JobSalary" class="text-danger"></span>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input type="file" asp-for="JobImage" class="custom-file-input" id="inputGroupFile02">
+                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+            </div>
+            <div class="input-group-append">
+                <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+            </div>
+            <span asp-validation-for="JobImage" class="text-danger"></span>
+        </div>
+
+
+        <input class="btn btn-info" type="submit" value="Add" />
+</form>
+
+
+
+
+
+
+ <script src="https://cdn.tiny.cloud/1/bor31yfd0f142uzi03meje77c7zvudgp1vqiu4703wqkbqnf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+<body>
+ 
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded'
+        });
+    </script>
+</body>
 

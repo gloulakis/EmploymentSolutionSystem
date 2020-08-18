@@ -874,9 +874,6 @@ C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSys
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Debug\netcoreapp3.1\pt\Hangfire.Core.resources.dll
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Debug\netcoreapp3.1\zh-TW\Hangfire.Core.resources.dll
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Debug\netcoreapp3.1\zh\Hangfire.Core.resources.dll
-C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.csproj.CoreCompileInputs.cache
-C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Debug\netcoreapp3.1\es\System.Web.Razor.resources.dll
 C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\Advertisement.cshtml.g.cs
@@ -1330,3 +1327,6 @@ C:\Users\Georgios.Loulakis\Documents\MyProject\MyProject\EmploymentSolutionSyste
 C:\Users\Georgios.Loulakis\Documents\MyProject\MyProject\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.dll
 C:\Users\Georgios.Loulakis\Documents\MyProject\MyProject\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.pdb
 C:\Users\Georgios.Loulakis\Documents\MyProject\MyProject\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.genruntimeconfig.cache
+C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.csproj.CoreCompileInputs.cache
+C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Giorgos\Documents\GitHub\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Debug\netcoreapp3.1\EmploymentSolutionSystem.MvcApplicationPartsAssemblyInfo.cache

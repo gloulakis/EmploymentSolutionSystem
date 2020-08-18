@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/SzeDTBJKfKjg9//QV4k119f7wPRnN2uJbOEMMKypjp2Oxhk0NJDGxy8smAXVlC1Qf9N1/giyNFb3xyh6dAwxw==",
+  "dgSpecHash": "PRiOAd2d/+C6RgpS6sbMe1JwmjCQeE5QOwN7HYgzQfY5bAn1bnmUjRxz6VpAi5n396TlVtq5Eoskgq58CVYwpw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giorgos\\Documents\\GitHub\\EmploymentSolutionSystem\\EmploymentSolutionSystem\\EmploymentSolutionSystem.csproj",
   "expectedPackageFiles": [
@@ -178,7 +178,8 @@
     "C:\\Users\\Giorgos\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Giorgos\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Giorgos\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Giorgos\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Giorgos\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Giorgos\\.nuget\\packages\\tinymce\\5.4.2\\tinymce.5.4.2.nupkg.sha512"
   ],
   "logs": [
     {

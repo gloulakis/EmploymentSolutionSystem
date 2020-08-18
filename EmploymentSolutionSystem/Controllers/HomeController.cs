@@ -74,7 +74,16 @@ namespace EmploymentSolutionSystem.Controllers
         [HttpPost]
         public IActionResult Create(JobList jobList)
         {
-            jobListServices.Add(jobList);
+            if (ModelState.IsValid)
+            {
+                jobListServices.Add(jobList);
+            }
+            else
+            {
+                return RedirectToAction("Create");
+            }
+
+            
             return RedirectToAction("Advertisement");
         }
 

@@ -38,6 +38,7 @@ namespace EmploymentSolutionSystem.Services
                 JobEdit.JobPosition = jobList.JobPosition;
                 JobEdit.JobDescription = jobList.JobDescription;
                 JobEdit.JobSalary = jobList.JobSalary;
+                JobEdit.JobImage = jobList.JobImage;
                 db.SaveChanges();
             }
         }

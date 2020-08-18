@@ -7,23 +7,41 @@
 
 <form asp-controller="Home" asp-action="SaveEdit" method="post">
     <div class="row align-bottom">
-        <div class="col-md-3">
-            <span>
-                <label asp-for="JobTitle"></label>
-                <input class="form-control" asp-for="JobTitle" />
-            </span>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Title</span>
+            </div>
+            <input type="text" class="form-control" asp-for="JobTitle" aria-label="Job Title" aria-describedby="basic-addon1">
         </div>
-        <div class="col-md-3">
-            <label asp-for="JobDescription"></label>
-            <input class="form-control" asp-for="JobDescription" />
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Position</span>
+            </div>
+            <input type="text" class="form-control" asp-for="JobPosition" aria-label="Job Position" aria-describedby="basic-addon1">
         </div>
-        <div class="col-md-3">
-            <label asp-for="JobPosition"></label>
-            <input class="form-control" asp-for="JobPosition" />
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Description</span>
+            </div>
+            <input type="text" class="form-control" asp-for="JobDescription" aria-label="Job Description" aria-describedby="basic-addon1">
         </div>
-        <div class="col-md-3">
-            <label asp-for="JobSalary"></label>
-            <input class="form-control" asp-for="JobSalary" />
+
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Salary</span>
+            </div>
+            <input type="number" class="form-control" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input asp-for="JobImage" type="file" class="custom-file-input" id="inputGroupFile02">
+                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+            </div>
+            <div class="input-group-append">
+                <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+            </div>
         </div>
     </div>
     <hr />
