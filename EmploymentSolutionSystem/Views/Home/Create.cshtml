@@ -15,7 +15,7 @@
 </div>
 <br />
 
-<form asp-controller="Home" asp-action="Create" enctype="multipart/form-data" method="post">
+<form asp-controller="Home" asp-action="Create" runat="server" enctype="multipart/form-data" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -36,38 +36,36 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Description</span>
         </div>
-        <textarea class="form-control" asp-for="JobDescription"> Здравей Слив </textarea>
-        
+        <textarea class="form-control" asp-for="JobDescription"></textarea>
+
         <span asp-validation-for="JobDescription" class="text-danger"></span>
     </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Salary</span>
-            </div>
-            <input type="number" class="form-control" style="width:auto" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
-            <span asp-validation-for="JobSalary" class="text-danger"></span>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Salary</span>
         </div>
+        <input type="number" class="form-control" style="width:auto" asp-for="JobSalary" aria-label="Job Salary" aria-describedby="basic-addon1">
+        <span asp-validation-for="JobSalary" class="text-danger"></span>
+    </div>
 
-        <div class="input-group mb-3">
-            <div class="custom-file">
-                <input type="file" asp-for="JobImage" class="custom-file-input" id="inputGroupFile02">
-                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-            </div>
-            <div class="input-group-append">
-                <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-            </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+        </div>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" asp-for="JobImage" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
             <span asp-validation-for="JobImage" class="text-danger"></span>
         </div>
+    </div>
 
 
-        <input class="btn btn-info" type="submit" value="Add" />
+    <input class="btn btn-info" type="submit" value="Add" />
 </form>
 
 
 <br /><br />
-
-
 
 
 
