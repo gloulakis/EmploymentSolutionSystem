@@ -33,6 +33,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.7",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
+          "TinyMCE": "5.4.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2451,6 +2452,7 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "TinyMCE/5.4.2": {},
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -5255,6 +5257,13 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "TinyMCE/5.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5HwgxDTZRBXW8jEgb+Hc8FL+GeZqopsTfnsi7lxMDSAR4scAP49ssV6m+Z1HniVhOoYjEjs/EG468dr+IvXY+w==",
+      "path": "tinymce/5.4.2",
+      "hashPath": "tinymce.5.4.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

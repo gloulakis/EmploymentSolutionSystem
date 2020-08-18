@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using EmploymentSolutionSystem.Domain.Models;
 
 namespace EmploymentSolutionSystem.Services
@@ -14,6 +15,7 @@ namespace EmploymentSolutionSystem.Services
         public IEnumerable<JobList> GetAll();
 
         public void Delete(int id);
+
     }
 
 }
