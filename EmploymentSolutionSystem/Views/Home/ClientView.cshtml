@@ -27,25 +27,25 @@
                     float: left;
                     border: 2px solid;
                     margin: 10px;">
+
                 <img src="@job.JobImage" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">@job.JobTitle</h5>
                     <h5 hidden class="card-title font-weight-bold">@job.Id</h5>
                     <p class="card-text font-weight-bold">Position:@job.JobPosition</p>
                     <p>Salary:@job.JobSalary</p>
-                    <a data-toggle="modal" data-target="#exampleModalScrollable" class="btn btn-outline-dark">More</a>
+                    <a data-toggle="modal"  onclick="GetJobtoDisplay('@job.Id','@job.JobTitle','@job.JobDescription')" data-target="#exampleModalScrollable" class="btn btn-outline-dark">More</a>
                     <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalScrollableTitle">@job.JobTitle</h5>
-                                    <h5 hidden class="modal-title" id="exampleModalScrollableTitle">@job.Id</h5>
+                                    <span id="exampleModalScrollableTitle"></span> ><span id="exampleModalScrollableid"></span> >
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    @job.JobDescription
+                                    <span id="exampleModalScrollableid"></span>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -63,6 +63,17 @@
         }
     }
 }
+
+<script>
+    function GetJobtodelete(id, Title, desc) {
+        var $Title = $("#exampleModalScrollableTitle");
+        var $id = $("#exampleModalScrollableid");
+        var $jobDes = $("#exampleModalScrollableid"); 
+        $Title.html(Title);
+        $id.html(id);
+        $jobDes.html(desc);
+    }
+</script>
 
 
 
