@@ -19,6 +19,33 @@ namespace EmploymentSolutionSystem.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("EmploymentSolutionSystem.Domain.Models.Candidate", b =>
+                {
+                    b.Property<int>("Can_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Can_CV")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Can_LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Can_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Job_Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("Can_Id");
+
+                    b.ToTable("candidate");
+                });
+
             modelBuilder.Entity("EmploymentSolutionSystem.Domain.Models.Company", b =>
                 {
                     b.Property<int>("Id")
@@ -53,7 +80,12 @@ namespace EmploymentSolutionSystem.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("JobList")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("JobList");
 
                     b.ToTable("company");
                 });
@@ -67,25 +99,44 @@ namespace EmploymentSolutionSystem.Data.Migrations
 
                     b.Property<string>("JobDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("JobImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("JobPosition")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("JobSalary")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("JobTitle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
                     b.ToTable("Joblist");
+                });
+
+            modelBuilder.Entity("EmploymentSolutionSystem.Domain.Models.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("JobStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("jobstatus");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -286,6 +337,13 @@ namespace EmploymentSolutionSystem.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("EmploymentSolutionSystem.Domain.Models.Company", b =>
+                {
+                    b.HasOne("EmploymentSolutionSystem.Domain.Models.JobList", "Job")
+                        .WithMany()
+                        .HasForeignKey("JobList");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

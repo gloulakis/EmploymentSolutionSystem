@@ -71,17 +71,13 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button onclick="DeleteJob()" type="button" class="btn btn-primary">Delete</button>
                 </div>
+            </div>
         </div>
     </div>
-        </div>
-
-
-
 <script>
     function edit(id) {
         window.location ="/Home/Edit/"+id
     }
-
     function GetJobtodelete(id, Title) {
         var $Title = $("#JobToDeleteTitle");
         var $id = $("#JobToDeleteID");
@@ -89,12 +85,8 @@
         $Title.html(Title);
         $id.html(id);
     }
-
     function DeleteJob() {
         var $id = $("#JobToDeleteID").html();
         window.location = "/Home/Delete/"+ $id;
     }
-
-  
-
 </script>

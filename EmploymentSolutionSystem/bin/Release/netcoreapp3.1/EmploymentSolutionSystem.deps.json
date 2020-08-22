@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP3_1"
     ],
-    "languageVersion": "",
+    "languageVersion": "8.0",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -25,7 +25,6 @@
       "EmploymentSolutionSystem/1.0.0": {
         "dependencies": {
           "Hangfire.Core": "1.7.12",
-          "Microsoft.AspNet.Razor.es": "3.2.7",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.7",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.7",
           "Microsoft.AspNetCore.Identity.UI": "3.1.7",
@@ -345,27 +344,6 @@
         },
         "compile": {
           "lib/netstandard2.0/Hangfire.Core.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Razor/3.2.7": {
-        "runtime": {
-          "lib/net45/System.Web.Razor.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.61128.0"
-          }
-        },
-        "compile": {
-          "lib/net45/System.Web.Razor.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Razor.es/3.2.7": {
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "3.2.7"
-        },
-        "resources": {
-          "lib/net45/es/System.Web.Razor.resources.dll": {
-            "locale": "es"
-          }
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.7": {
@@ -4045,20 +4023,6 @@
       "sha512": "sha512-xVpgaVt4IrNpWgd301FBa8RTcV0bDtZvdY7JzbGYcYTDnobYbMVFQCyXI9OYZ3g+hv9mD5IlRpmBPtPzKsaR+Q==",
       "path": "hangfire.core/1.7.12",
       "hashPath": "hangfire.core.1.7.12.nupkg.sha512"
-    },
-    "Microsoft.AspNet.Razor/3.2.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-BpWEZ+Ys7g9VAkbAfpG5jr5A1fKcmadCCXv3fYfps5YfTVABJIGV4uc9yvmXKxsNsjL+BzDld2gs+xtgT2gg1g==",
-      "path": "microsoft.aspnet.razor/3.2.7",
-      "hashPath": "microsoft.aspnet.razor.3.2.7.nupkg.sha512"
-    },
-    "Microsoft.AspNet.Razor.es/3.2.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-HokaqyB/dspbJTwMsjvloetuF6V8szlMnQ0UaVUcf6ozDAHA6X6abkCQgISC/zqfDV8Rn7yO871rYdhWcQVNJA==",
-      "path": "microsoft.aspnet.razor.es/3.2.7",
-      "hashPath": "microsoft.aspnet.razor.es.3.2.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.7": {
       "type": "package",

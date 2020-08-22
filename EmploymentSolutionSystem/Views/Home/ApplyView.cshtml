@@ -1,0 +1,46 @@
+﻿@model JobList
+@{
+    ViewData["Title"] = "Apply";
+}
+
+<form>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationDefault01">First name</label>
+            <input type="text" class="form-control" id="validationDefault01" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationDefault02">Last name</label>
+            <input type="text" class="form-control" id="validationDefault02" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationDefault02">Mobile Phone</label>
+            <input type="tel" class="form-control" id="validationDefault02" required>
+        </div>
+    </div>
+    <div>
+        <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+            <label class="custom-file-label" for="validatedCustomFile">Curriculum vitae</label>
+            <div class="invalid-feedback">Example invalid custom file feedback</div>
+        </div>
+        <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="validatedCustomFile">
+            <label class="custom-file-label" for="validatedCustomFile">Recommendation letter</label>
+            <div class="invalid-feedback">Example invalid custom file feedback</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2">
+            <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+            </label>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+</form>

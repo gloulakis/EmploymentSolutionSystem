@@ -3,7 +3,6 @@
     ViewData["Title"] = "Find New Job";
 }
 
-
 <div class="form-row">
     <div class="col-6">
         <h4 class="text-info">Apply now!</h4>
@@ -11,67 +10,78 @@
 </div>
 <br />
 
-@{
-    if (Model == null)
-    {
-       <p>empty</p>
-    }
-    else
-    {
-        foreach (var job in Model)
-        {
-            <div class="card shadow" style="
+<div class="card-deck">
+<div>
+    <div>
+        @{
+            if (Model == null)
+            {
+                <p>empty</p>
+            }
+            else
+            {
+                foreach (var job in Model)
+                {
+                    <div class="card shadow" style="
                     width: 18rem;
                     height: 20rem;
                     overflow: hidden;
                     float: left;
-                    border: 2px solid;
                     margin: 10px;">
 
-                <img src="@job.JobImage" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">@job.JobTitle</h5>
-                    <h5 hidden class="card-title font-weight-bold">@job.Id</h5>
-                    <p class="card-text font-weight-bold">Position:@job.JobPosition</p>
-                    <p>Salary:@job.JobSalary</p>
-                    <a data-toggle="modal"  onclick="GetJobtoDisplay('@job.Id','@job.JobTitle','@job.JobDescription')" data-target="#exampleModalScrollable" class="btn btn-outline-dark">More</a>
-                    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <span id="exampleModalScrollableTitle"></span> ><span id="exampleModalScrollableid"></span> >
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <span id="exampleModalScrollableid"></span>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Apply</button>
-                                    <br />
+                        <img style="height:40%;width:50%;" src="/Images/Advertisement/logo-demo3.png" class="card-img-top" alt="...">
+                        <div class="card-body container">
+                            <div class="overflow-hidden"><h5 class="card-title font-weight-bold overflow-hidden">@job.JobTitle</h5></div>
+                            <h5 hidden class="card-title font-weight-bold">@job.Id</h5>
+                            <p class="card-text font-weight-bold min-vw-100 overflow-hidden">Position: @job.JobPosition</p>
+                            <p><bold>Salary: </bold> @job.JobSalary</p>
+                            <a data-toggle="modal" onclick="GetJobtoDisplay('@job.Id','@job.JobTitle','@job.JobDescription')" data-target="#exampleModalScrollable" class="btn btn-warning">More</a>
+                           
+                            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-dark text-warning ">
+                                            <span id="exampleModalScrollableTitle"></span><span hidden id="exampleModalScrollableid"></span>
+                                        </div>
+                                        <div class="modal-body">
+                                            <span  id="exampleModalScrollabledes"></span>
+                                        </div>
+                                        <div class="modal-footer bg-dark">
+                                            <button type="button" onclick="Apply('@job.Id')" class="btn btn-outline-warning">Apply</button>
+                                            <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-
-                </div>
-            </div>
-
-
+                }
+            }
         }
-    }
-}
+    </div>
+</div>
+</div>
+
+
 
 <script>
-    function GetJobtodelete(id, Title, desc) {
+    function GetJobtoDisplay(id, Title, desc) {
         var $Title = $("#exampleModalScrollableTitle");
         var $id = $("#exampleModalScrollableid");
-        var $jobDes = $("#exampleModalScrollableid"); 
+        var $jobDes = $("#exampleModalScrollabledes");
         $Title.html(Title);
         $id.html(id);
         $jobDes.html(desc);
+    }
+
+    function DeleteJob() {
+        var $id = $("#JobToDeleteID").html();
+        window.location = "/Home/Delete/" + $id;
+    }
+
+    function Apply(id) {
+        window.location = "/Home/ApplyView/" + id
     }
 </script>
 

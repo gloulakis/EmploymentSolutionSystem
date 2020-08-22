@@ -1,5 +1,3 @@
-using System;
-
 namespace EmploymentSolutionSystem.Models
 {
     public class ErrorViewModel

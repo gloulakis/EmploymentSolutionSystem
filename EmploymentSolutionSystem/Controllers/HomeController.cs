@@ -1,10 +1,13 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using EmploymentSolutionSystem.Domain.Models;
 using EmploymentSolutionSystem.Models;
 using EmploymentSolutionSystem.Services;
-using EmploymentSolutionSystem.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
-using EmploymentSolutionSystem.Domain.Services;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.FileProviders;
+using System;
+using System.Diagnostics;
+using System.IO;
 
 namespace EmploymentSolutionSystem.Controllers
 {
@@ -13,14 +16,14 @@ namespace EmploymentSolutionSystem.Controllers
     {
         private readonly IJobListService jobListServices;
 
-       
+
         public HomeController(IJobListService jobListServices)
         {
             this.jobListServices = jobListServices;
         }
 
-     
-        public IActionResult Delete( int id)
+
+        public IActionResult Delete(int id)
         {
             if (ModelState.IsValid)
             {
@@ -29,16 +32,23 @@ namespace EmploymentSolutionSystem.Controllers
             return RedirectToAction("Advertisement");
         }
 
-       
         [HttpGet]
         [Route("Home/Edit/{id}")]
-        public IActionResult Edit (int id)
+        public IActionResult Edit(int id)
         {
             var model = jobListServices.GetById(id);
             return View(model);
         }
 
-       
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("Home/ApplyView/{id}")]
+        public IActionResult ApplyView(int id)
+        {
+            var model = jobListServices.GetById(id);
+            return View(model);
+        }
+
         [HttpPost]
         public IActionResult SaveEdit(JobList jobList)
         {
@@ -48,6 +58,7 @@ namespace EmploymentSolutionSystem.Controllers
             }
             return RedirectToAction("Advertisement");
         }
+
 
         [AllowAnonymous]
         public IActionResult Index()
@@ -62,20 +73,36 @@ namespace EmploymentSolutionSystem.Controllers
             return View(model);
         }
 
-      
+
         [HttpGet]
         public IActionResult Create()
         {
-            
+
             return View();
         }
 
-      
+
         [HttpPost]
-        public IActionResult Create(JobList jobList)
+        public IActionResult Create(JobList jobList, IFormFile files)
         {
             if (ModelState.IsValid)
             {
+                if (files != null)
+                {
+                    if(files.Length > 0)
+                    {
+                        var fileName = Path.GetFileName(files.FileName);
+                        var myUniqueFileName = Convert.ToString(Guid.NewGuid());
+                        var fileExtension = Path.GetExtension(fileName);
+                        var newFileName = string.Concat(myUniqueFileName, fileExtension);
+                        var filepath = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwroot", "Images")).Root + $@"\{newFileName}";
+                        using (FileStream fs = System.IO.File.Create(filepath))
+                        {
+                            files.CopyTo(fs);
+                            fs.Flush();
+                        }
+                    }
+                }
                 jobListServices.Add(jobList);
             }
             else
@@ -83,11 +110,11 @@ namespace EmploymentSolutionSystem.Controllers
                 return RedirectToAction("Create");
             }
 
-            
+
             return RedirectToAction("Advertisement");
         }
 
- 
+
         [HttpGet]
         public IActionResult Advertisement()
         {
@@ -97,6 +124,11 @@ namespace EmploymentSolutionSystem.Controllers
 
         [AllowAnonymous]
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult ApplyView()
         {
             return View();
         }

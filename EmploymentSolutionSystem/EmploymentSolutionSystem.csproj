@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\HRDepartment\**" />
+    <Content Remove="Views\Home\HRDepartment\**" />
+    <EmbeddedResource Remove="Views\Home\HRDepartment\**" />
+    <None Remove="Views\Home\HRDepartment\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Hangfire.Core" Version="1.7.12" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
@@ -22,7 +29,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Images\Home\" />
-    <Folder Include="wwwroot\Images\Advertisement\" />
   </ItemGroup>
 
 </Project>
