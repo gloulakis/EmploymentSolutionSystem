@@ -1,10 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EmploymentSolutionSystem.Domain.Models
 {
     public class JobList
     {
+        public JobList()
+        {
+            company = new List<Company>();
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -21,6 +27,10 @@ namespace EmploymentSolutionSystem.Domain.Models
 
 
         public string JobImage { get; set; }
+
+
+        public virtual IEnumerable<Company> company { get; set; } 
+
 
     }
 }

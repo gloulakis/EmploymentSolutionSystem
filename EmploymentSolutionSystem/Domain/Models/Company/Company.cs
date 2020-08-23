@@ -29,9 +29,5 @@ namespace EmploymentSolutionSystem.Domain.Models
 
         [Required]
         public string CompanyLogo { get; set; }
-
-        [ForeignKey("JobList")]
-        public virtual JobList Job { get; set; }
-
     }
 }

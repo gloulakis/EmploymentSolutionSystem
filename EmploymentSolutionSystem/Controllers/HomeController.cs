@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
@@ -70,9 +71,9 @@ namespace EmploymentSolutionSystem.Controllers
         public IActionResult ClientView()
         {
             var model = jobListServices.GetAll();
+           
             return View(model);
         }
-
 
         [HttpGet]
         public IActionResult Create()
@@ -132,6 +133,8 @@ namespace EmploymentSolutionSystem.Controllers
         {
             return View();
         }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
