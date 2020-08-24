@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
@@ -16,11 +15,13 @@ namespace EmploymentSolutionSystem.Controllers
     public class HomeController : Controller
     {
         private readonly IJobListService jobListServices;
+      
 
 
         public HomeController(IJobListService jobListServices)
         {
             this.jobListServices = jobListServices;
+    
         }
 
 
@@ -134,8 +135,7 @@ namespace EmploymentSolutionSystem.Controllers
             return View();
         }
 
-
-
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

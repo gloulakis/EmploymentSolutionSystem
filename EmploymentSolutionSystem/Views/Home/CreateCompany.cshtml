@@ -1,0 +1,97 @@
+﻿@model Company
+@{
+    ViewData["Title"] = "Create";
+}
+
+<br />
+<br />
+<div class="form-row">
+    <div class="col-6">
+        <h4 class="text-info">Create New Company!</h4>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-action="Companies" class="btn btn-info">Back</a>
+    </div>
+</div>
+<br />
+
+<form asp-controller="Home" asp-action="CreateCompany" runat="server" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="input-group mb-3">
+        control
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">BULSTAT</span>
+        </div>
+        <input type="text" class="form-" asp-for="BULSTAT" aria-label="Job Title" aria-describedby="basic-addon1">
+        <span asp-validation-for="BULSTAT" class="text-danger"></span>
+    </div>
+    <div class="input-group mb-3">
+        control
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CompanyName</span>
+        </div>
+        <input type="text" class="form-" asp-for="CompanyName" aria-label="Job Title" aria-describedby="basic-addon1">
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CompanyEmail</span>
+        </div>
+        <input type="email" class="form-control" asp-for="CompanyEmail" aria-label="Job Position" aria-describedby="basic-addon1">
+        <span asp-validation-for="CompanyEmail" class="text-danger"></span>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CompanyTelephoneNumber</span>
+        </div>
+        <input type="tel" class="form-control" style="width:auto" asp-for="CompanyTelephoneNumber" aria-label="Job Salary" aria-describedby="basic-addon1">
+
+        <span asp-validation-for="CompanyTelephoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CompanyCity</span>
+        </div>
+        <input type="text" class="form-control" style="width:auto" asp-for="CompanyCity" aria-label="Job Salary" aria-describedby="basic-addon1">
+        <span asp-validation-for="CompanyCity" class="text-danger"></span>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CompanyAddress</span>
+        </div>
+        <input type="text" class="form-control" style="width:auto" asp-for="CompanyAddress" aria-label="Job Salary" aria-describedby="basic-addon1">
+        <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CompanyZIPCode</span>
+        </div>
+        <input type="text" class="form-control" style="width:auto" asp-for="CompanyZIPCode" aria-label="Job Salary" aria-describedby="basic-addon1">
+        <span asp-validation-for="CompanyZIPCode" class="text-danger"></span>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CompanyLogo</span>
+        </div>
+        <input type="number" class="form-control" style="width:auto" asp-for="CompanyLogo" aria-label="Job Salary" aria-describedby="basic-addon1">
+        <span asp-validation-for="CompanyLogo" class="text-danger"></span>
+    </div>
+
+
+    <input class="btn btn-info" type="submit" value="Add" />
+</form>
+
+
+<br />
+<br />
+
+
+
+
+
+ 

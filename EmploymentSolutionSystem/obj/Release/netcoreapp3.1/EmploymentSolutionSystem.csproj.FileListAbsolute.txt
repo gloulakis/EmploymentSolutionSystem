@@ -1768,7 +1768,6 @@ C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSyst
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\EmploymentSolutionSystem.RazorCoreGenerate.cache
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\ClientView.cshtml.g.cs
-C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\CompanyInformation.cshtml.g.cs
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
@@ -1812,3 +1811,5 @@ C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSyst
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\EmploymentSolutionSystem.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\EmploymentSolutionSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\Advertisement.cshtml.g.cs
+C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\Companies.cshtml.g.cs
+C:\Users\Administrator\Documents\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Home\CreateCompany.cshtml.g.cs

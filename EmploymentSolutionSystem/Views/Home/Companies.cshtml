@@ -1,24 +1,23 @@
 ﻿@model List<Company>
 @{
-    ViewData["Title"] = "Job Advertisements";
+    ViewData["Title"] = "Company Information";
 }
 
 <div class="border border-white">
 
     <div class="form-row">
         <div class="col-6">
-            <h4 class="text-info">New Advertisement!</h4>
+            <h4 class="text-info">Companies</h4>
         </div>
         <div class="col-6 text-right">
-            <a asp-action="Create" class="btn btn-info">Create</a>
-            <a asp-action="ClientView" class="btn btn-info">Client View</a>
+            <a asp-action="CreateCompany" class="btn btn-info">Create</a>
         </div>
     </div>
     <br />
     <div>
         @if (Model == null)
         {
-            <p>No Job exists. Add Company</p>
+            <p>Empty</p>
         }
         else
         {
