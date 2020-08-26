@@ -1,3 +1,4 @@
+using AutoMapper;
 using EmploymentSolutionSystem.Data;
 using EmploymentSolutionSystem.Domain.Services;
 using EmploymentSolutionSystem.Services;
@@ -25,9 +26,11 @@ namespace EmploymentSolutionSystem
         {
             services.AddMvc().AddControllersAsServices();
 
+           
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
@@ -35,6 +38,10 @@ namespace EmploymentSolutionSystem
 
             services.AddTransient<IJobListService, JobListService>();
             services.AddTransient<ICompanyService, CompanyService>();
+
+            services.AddAutoMapper(typeof(Startup));
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -11,7 +11,7 @@
         </div>
         <div class="col-6 text-right">
             <a asp-action="Create" class="btn btn-info">Create</a>
-            <a asp-action="ClientView" class="btn btn-info">Client View</a>
+            <a asp-controller="Home" asp-action="ClientView" class="btn btn-info">Client View</a>
         </div>
     </div>
     <br />
@@ -87,6 +87,6 @@
     }
     function DeleteJob() {
         var $id = $("#JobToDeleteID").html();
-        window.location = "/Home/Delete/"+ $id;
+        window.location = "/Advertisement/Delete/"+ $id;
     }
 </script>
