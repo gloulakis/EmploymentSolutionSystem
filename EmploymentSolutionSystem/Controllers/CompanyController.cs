@@ -1,4 +1,5 @@
-﻿using EmploymentSolutionSystem.Domain.Services;
+﻿using EmploymentSolutionSystem.Domain.Models;
+using EmploymentSolutionSystem.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmploymentSolutionSystem.Controllers
@@ -11,25 +12,49 @@ namespace EmploymentSolutionSystem.Controllers
             this.companyService = companyService;
         }
         [HttpGet]
-        public IActionResult Companies()
+        public IActionResult Company()
         {
             var model = companyService.GetAll();
             return View(model);
         }
+
+        [HttpGet]
+        [Route("Company/Edit/{id}")]
+        public IActionResult Edit(int id)
+        {
+            var model = companyService.GetById(id);
+            return View(model);
+        }
         [HttpPost]
-        public IActionResult CreateCompany(Domain.Models.Company company)
+        public IActionResult SaveEdit(Company company)
         {
             if (ModelState.IsValid)
             {
+                companyService.Edit(company);
+            }
+            return RedirectToAction("Company");
+        }
 
+        [HttpGet]
+        public IActionResult CreateCompany()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateCompany(Company company)
+        {
+            if (ModelState.IsValid)
+            {
                 companyService.Add(company);
             }
             else
             {
                 return RedirectToAction("CreateCompany");
             }
-            return RedirectToAction("Companies");
+            return RedirectToAction("Company");
         }
+
         public IActionResult Index()
         {
             return View();

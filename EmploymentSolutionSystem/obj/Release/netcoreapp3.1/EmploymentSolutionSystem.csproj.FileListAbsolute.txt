@@ -2277,7 +2277,6 @@ C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\Employmen
 C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Advertisement\Advertisement.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Advertisement\Create.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Advertisement\Edit.cshtml.g.cs
-C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Company\Companies.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\EmploymentSolutionSystem\obj\Release\netcoreapp3.1\Razor\Views\Company\CreateCompany.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Release\netcoreapp3.1\AutoMapper.dll
 C:\Users\Administrator\Source\Repos\gloulakis\EmploymentSolutionSystem\EmploymentSolutionSystem\bin\Release\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

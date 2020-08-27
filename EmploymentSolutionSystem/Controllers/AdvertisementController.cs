@@ -15,13 +15,9 @@ namespace EmploymentSolutionSystem.Controllers
     {
         private readonly IJobListService jobListServices;
 
-        
-
         public AdvertisementController(IJobListService jobListServices)
         {
             this.jobListServices = jobListServices;
-           
-
         }
 
 
@@ -35,7 +31,7 @@ namespace EmploymentSolutionSystem.Controllers
         }
 
         [HttpGet]
-        [Route("Home/Edit/{id}")]
+        [Route("Advertisement/Edit/{id}")]
         public IActionResult Edit(int id)
         {
             var model = jobListServices.GetById(id);

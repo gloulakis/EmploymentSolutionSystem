@@ -10,7 +10,7 @@
             <h4 class="text-info">Companies</h4>
         </div>
         <div class="col-6 text-right">
-            <a asp-action="CreateCompany" class="btn btn-info">Create</a>
+            <a asp-controller="Company" asp-action="CreateCompany" class="btn btn-info">Create</a>
         </div>
     </div>
     <br />
@@ -78,7 +78,7 @@
 
 <script>
     function edit(id) {
-        window.location ="/Home/Edit/"+id
+        window.location ="/Company/Edit/"+id
     }
 
     function GetCompanyToDelete(id, Title) {

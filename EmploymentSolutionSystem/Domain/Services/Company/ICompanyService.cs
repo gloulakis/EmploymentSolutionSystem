@@ -7,7 +7,11 @@ namespace EmploymentSolutionSystem.Domain.Services
     {
         public void Add(Company company);
 
+        void Edit(Company company);
+
         public IEnumerable<Company> GetAll();
+
+        Company GetById(int id);
 
     }
 }

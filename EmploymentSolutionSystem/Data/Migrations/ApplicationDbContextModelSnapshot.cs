@@ -53,6 +53,10 @@ namespace EmploymentSolutionSystem.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("BULSTAT")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CompanyAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -80,12 +84,12 @@ namespace EmploymentSolutionSystem.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("JobList")
+                    b.Property<int?>("JobListId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("JobList");
+                    b.HasIndex("JobListId");
 
                     b.ToTable("company");
                 });
@@ -99,24 +103,21 @@ namespace EmploymentSolutionSystem.Data.Migrations
 
                     b.Property<string>("JobDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("JobImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("JobPosition")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("JobSalary")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("JobTitle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -341,9 +342,9 @@ namespace EmploymentSolutionSystem.Data.Migrations
 
             modelBuilder.Entity("EmploymentSolutionSystem.Domain.Models.Company", b =>
                 {
-                    b.HasOne("EmploymentSolutionSystem.Domain.Models.JobList", "Job")
-                        .WithMany()
-                        .HasForeignKey("JobList");
+                    b.HasOne("EmploymentSolutionSystem.Domain.Models.JobList", null)
+                        .WithMany("company")
+                        .HasForeignKey("JobListId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
