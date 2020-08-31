@@ -30,7 +30,7 @@ namespace EmploymentSolutionSystem.Domain.Models
         [Required]
         public string CompanyZIPCode { get; set; }
 
-        [Required]
+       
         public string CompanyLogo { get; set; }
     }
 }

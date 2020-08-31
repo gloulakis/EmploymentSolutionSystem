@@ -13,7 +13,5 @@ namespace EmploymentSolutionSystem.Data
         }
         public DbSet<JobList> Joblist { get; set; }
         public DbSet<Company> company { get; set; }
-        public DbSet<Candidate> candidate { get; set; }
-        public DbSet<Status> jobstatus { get; set; }
     }
 }

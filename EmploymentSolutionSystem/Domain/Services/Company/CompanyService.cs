@@ -28,10 +28,10 @@ namespace EmploymentSolutionSystem.Domain.Services
                 ComEdit.CompanyAddress = company.CompanyAddress;
                 ComEdit.CompanyCity = company.CompanyCity;
                 ComEdit.CompanyEmail = company.CompanyEmail;
-                ComEdit.CompanyLogo = company.CompanyLogo;
                 ComEdit.CompanyName = company.CompanyName;
                 ComEdit.CompanyTelephoneNumber = company.CompanyTelephoneNumber;
                 ComEdit.CompanyZIPCode = company.CompanyZIPCode;
+                ComEdit.CompanyLogo = company.CompanyLogo;
                 db.SaveChanges();
             }
         }

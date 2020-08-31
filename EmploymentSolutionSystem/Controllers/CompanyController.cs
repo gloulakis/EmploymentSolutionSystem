@@ -1,6 +1,9 @@
 ﻿using EmploymentSolutionSystem.Domain.Models;
 using EmploymentSolutionSystem.Domain.Services;
+using java.nio.file;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.IO;
 
 namespace EmploymentSolutionSystem.Controllers
 {
@@ -41,7 +44,7 @@ namespace EmploymentSolutionSystem.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("")]
         public IActionResult CreateCompany(Company company)
         {
             if (ModelState.IsValid)
