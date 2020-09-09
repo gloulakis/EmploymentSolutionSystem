@@ -9681,19 +9681,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\Georgios.Loulakis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Source\\Repos\\gloulakis\\EmploymentSolutionSystem\\EmploymentSolutionSystem\\EmploymentSolutionSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Georgios.Loulakis\\Source\\Repos\\gloulakis\\EmploymentSolutionSystem\\EmploymentSolutionSystem\\EmploymentSolutionSystem.csproj",
       "projectName": "EmploymentSolutionSystem",
-      "projectPath": "C:\\Users\\Administrator\\Source\\Repos\\gloulakis\\EmploymentSolutionSystem\\EmploymentSolutionSystem\\EmploymentSolutionSystem.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Source\\Repos\\gloulakis\\EmploymentSolutionSystem\\EmploymentSolutionSystem\\obj\\",
+      "projectPath": "C:\\Users\\Georgios.Loulakis\\Source\\Repos\\gloulakis\\EmploymentSolutionSystem\\EmploymentSolutionSystem\\EmploymentSolutionSystem.csproj",
+      "packagesPath": "C:\\Users\\Georgios.Loulakis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Georgios.Loulakis\\Source\\Repos\\gloulakis\\EmploymentSolutionSystem\\EmploymentSolutionSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Georgios.Loulakis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
